@@ -1,0 +1,36 @@
+.sidebar-header {
+  width: 100%;
+  height: 20%;
+}
+
+.sidebar-content {
+  width: 100%;
+  height: 80%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-content > span {
+  padding: 1rem;
+  border-radius: 50%;
+
+  &:hover {
+    @include transit-ease;
+    background: $green-100;
+    color: $my-green;
+  }
+}
+
+.sidebar-icon {
+  width: 26.25px;
+  height: 26.25px;
+  min-width: auto;
+  min-height: auto;
+}
+
+.homie {
+  fill: $my-green;
+}

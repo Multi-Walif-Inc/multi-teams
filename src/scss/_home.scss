@@ -1,0 +1,192 @@
+.home-container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.home-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'DroidSans',Verdana, Geneva, Tahoma, sans-serif;
+
+  &-left {
+    font-weight: bold;
+  }
+
+  &-right {
+    font-weight: bold;
+    padding: .2rem .5rem .2rem;
+    color: $green-300;
+    background: $gray-100;
+    border: 0px solid $green-200;
+    box-shadow: $lighter-shadow;
+    border-radius: 4px;
+
+      
+  &:hover {
+    @include transit-ease;
+    background: $my-green;
+    color: $gray-50;
+  }
+  }
+}
+
+.home-title {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-family: 'DroidSans',Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: 2px solid $gray-100;
+}
+
+.reminders-div {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-reminder {
+  width: 100%;
+  height: 150px;
+}
+
+.reminder-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.reminder-title-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  fill: $green-400;
+}
+
+.reminder-title-icon.second {
+  fill: $blue-400;
+}
+
+.reminder-title-icon.third {
+  fill: $yellow-400;
+}
+
+.reminder-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: .3rem;
+  padding-left: .6rem;
+  //border-left: 1px solid $green-400;
+}
+
+.reminder-media {
+  display: flex;
+  padding: 1rem;
+  padding-left: 0rem;
+}
+
+.reminder-text {
+  margin-left: 2rem;
+}
+
+.reminder-text > span {
+  font-weight: 500;
+  color: $my-green;
+
+  &:hover {
+    @include transit-ease;
+    color: $green-300;
+  }
+}
+
+.dp1, .dp2 {
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid $gray-200;
+}
+
+.dp1 {
+  position: relative;
+  z-index: 1;
+}
+
+.dp2 {
+  position: absolute;
+  z-index: 2;
+  transform: translateX(-2rem);
+  box-shadow: $lighter-shadow;
+}
+
+.meeting-image {
+  width: 150px;
+  border: 2px solid $blue-200;
+  border-radius: 4px;
+  box-shadow: $lighter-shadow;
+  position: relative;
+  z-index: 1;
+}
+
+.reminder-icon {
+  position: relative;
+  z-index: 2;
+  transform: translate(-2rem,2rem);
+  fill: $gray-50;
+}
+
+.reminder-text.meeting {
+  margin-left: 0rem;
+}
+
+.reminder-text.meeting > span {
+  text-transform: capitalize;
+  margin-left: .2rem;
+  margin-right: .2rem;
+  color: $blue-400;
+
+  &:hover {
+    @include transit-ease;
+    color: $blue-200;
+  }
+}
+
+.project-cover {
+  width: 150px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $yellow-200;
+  box-shadow: $lighter-shadow;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-logo {
+  width: 100px;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-10.2rem,-.5rem);
+}
+
+
+.reminder-text.projects > span {
+  text-transform: capitalize;
+  margin-left: .2rem;
+  margin-right: .2rem;
+  color: $yellow-600;
+
+  &:hover {
+    @include transit-ease;
+    color: $yellow-400;
+  }
+}
